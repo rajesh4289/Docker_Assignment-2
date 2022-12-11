@@ -16,7 +16,5 @@ In This Assignment we have two containers as follows :
 - Verify that the file is received properly at the clientside by verifying the checksum.
 - The client application again can be wriiten in any language that you are comfortable with, but the container should include all the necessary packages. Choose your base image wisely and install only necessary packages.
 
-To view the complete question, [click here](https://github.com/RajIshu/Docker-Assignment/raw/master/Assignment.docx).
-
 ## How to Run
 ```$ docker compose up```
