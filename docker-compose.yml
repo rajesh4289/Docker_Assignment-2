@@ -1,0 +1,34 @@
+# Name: RAJESH KUMAR YADAV
+# Sap id: 500084908
+# Roll no: R2142201739
+# Batch: 2(H)
+# Course: Container Orchestration and Infrastructure Automation
+# Program: BTECH CSE & Spl. CC&VT
+
+
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: server
+    volumes:
+      - servervol:/serverdata
+    ports:
+      - '8081:8081'
+
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    container_name: client
+    volumes:
+      - clientvol:/clientdata
+    depends_on:
+      - server
+
+volumes:
+  servervol:
+  clientvol:
